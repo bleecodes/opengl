@@ -13,6 +13,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         myGLSurfaceView = new MyGLSV(this);
         setContentView(myGLSurfaceView);
-       myGLSurfaceView.requestRender();
+      // myGLSurfaceView.requestRender();
     }
 }

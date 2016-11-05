@@ -15,6 +15,6 @@ public class MyGLSV extends GLSurfaceView {
         setEGLContextClientVersion(2);
         myGLSVRender = new MyGLSVRenderer();
         setRenderer(myGLSVRender);
-        setRenderMode(RENDERMODE_WHEN_DIRTY);
+//        setRenderMode(RENDERMODE_WHEN_DIRTY);
     }
 }
