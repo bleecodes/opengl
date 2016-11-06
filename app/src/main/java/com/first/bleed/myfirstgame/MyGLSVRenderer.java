@@ -12,6 +12,7 @@ import javax.microedition.khronos.opengles.GL10;
  */
 public class MyGLSVRenderer implements GLSurfaceView.Renderer {
     private Triangle mTriangle;
+    private Square mSquare;
 
     //keeps shapes relatively the same when you change from portrait to landscape
     private final float[] mMVPMatrix = new float[16];
@@ -22,7 +23,9 @@ public class MyGLSVRenderer implements GLSurfaceView.Renderer {
 
     @Override
     public void onSurfaceCreated(GL10 gl10, EGLConfig eglConfig) {
-        mTriangle= new Triangle();
+
+        mTriangle = new Triangle();
+        mSquare = new Square();
     }
 
     @Override
@@ -49,7 +52,8 @@ public class MyGLSVRenderer implements GLSurfaceView.Renderer {
         //keeps shapes relatively the same when you change from portrait to landscape
         Matrix.setLookAtM(mViewMatrix, 0 , 0 , 0, -3, 0f , 0f, 0f , 0f, 1.0f, 0.0f);
         Matrix.multiplyMM(mMVPMatrix, 0 , mProjectionMatrix, 0, mViewMatrix, 0);
-        mTriangle.draw(mMVPMatrix);
+       mTriangle.draw(mMVPMatrix);
+        mSquare.draw(mMVPMatrix);
         //used for rotate movement
 //        Matrix.multiplyMM(scratch, 0 , mMVPMatrix, 0, mRotationMatrix, 0);
 //
